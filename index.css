@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  padding: 5px;
+  top: 0;
+  background-color: white;
+}
+
+.nav span {
+  color: #e3a129;
+}
+
+.nav h1 {
+  color: #2a9962;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: grey;
+}
+
+.links a:hover {
+  color: black;
+  transition: ease-out 0.4s;
+}
+
+.login button {
+  background-color: #2a9962;
+  padding: 10px 35px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.login button:hover {
+  opacity: 0.8;
+  transition: ease-out 0.4s;
+}
+
+.content {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text-content {
+  width: 450px;
+}
+
+.content img {
+  width: 600px;
+  height: 650px;
+}
+
+.text-content h1 {
+  margin-top: 5px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.text-content h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: grey;
+}
+
+.text-content p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  color: grey;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.order button {
+  margin-top: 30px;
+  background-color: #e3a129;
+  border-radius: 50px;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font-weight: 600;
+}
+
+.order button:hover {
+  box-shadow: #e3a129 0px 5px 20px;
+  transition: ease-out 0.4s;
+}
+
+.order p {
+  color: grey;
+  margin-top: 40px;
+  width: 50px;
+  font-size: 10px;
+}
+
+.order span {
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+}
+
+.social img {
+  width: 50px;
+  height: 50px;
+}
+
+.social img:hover {
+  opacity: 0.8;
+  transition: ease-out 0.4s;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  width: 250px;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: grey 0px 5px 20px;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: #e3a129 0px 5px 20px;
+  transition: ease-out 0.5s;
+}
+
+.food img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+}
+
+.icon {
+  position: absolute;
+  bottom: -25px;
+  right: -15px;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.text-card {
+  flex-grow: 1;
+  margin-left: 85px;
+}
+
+.text-card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.text-card p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 5px 0;
+  color: grey;
+}
+
+.text-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #e3a129;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.text-card a:hover {
+  text-decoration: underline;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
