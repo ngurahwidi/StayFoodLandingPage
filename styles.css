@@ -20,34 +20,28 @@ body {
   top: 0;
   background-color: white;
 }
-
 .nav span {
   color: #e3a129;
 }
-
 .nav h1 {
   color: #2a9962;
   font-size: 30px;
   font-weight: 400;
 }
-
-.links {
+.nav .links {
   display: flex;
   gap: 30px;
 }
-
-.links a {
+.nav .links a {
   text-decoration: none;
   font-weight: 500;
   color: grey;
 }
-
-.links a:hover {
+.nav .links a:hover {
   color: black;
   transition: ease-out 0.4s;
 }
-
-.login button {
+.nav .login button {
   background-color: #2a9962;
   padding: 10px 35px;
   color: white;
@@ -55,10 +49,22 @@ body {
   border-radius: 30px;
   font-weight: 600;
 }
-
-.login button:hover {
+.nav .login button:hover {
   opacity: 0.8;
   transition: ease-out 0.4s;
+}
+.nav .toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+.nav .toggle-button span {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
 }
 
 .content {
@@ -68,43 +74,36 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
-.text-content {
-  width: 450px;
-}
-
 .content img {
   width: 600px;
   height: 650px;
 }
-
-.text-content h1 {
+.content .text-content {
+  width: 450px;
+}
+.content .text-content h1 {
   margin-top: 5px;
   font-size: 50px;
   font-weight: 600;
 }
-
-.text-content h3 {
+.content .text-content h3 {
   font-size: 20px;
   font-weight: 400;
   color: grey;
 }
-
-.text-content p {
+.content .text-content p {
   margin-top: 5px;
   font-size: 15px;
   font-weight: 400;
   color: grey;
 }
-
-.order {
+.content .text-content .order {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 }
-
-.order button {
+.content .text-content .order button {
   margin-top: 30px;
   background-color: #e3a129;
   border-radius: 50px;
@@ -113,26 +112,22 @@ body {
   color: white;
   font-weight: 600;
 }
-
-.order button:hover {
+.content .text-content .order button:hover {
   box-shadow: #e3a129 5px 5px 20px;
   transition: ease-out 0.4s;
 }
-
-.order p {
+.content .text-content .order p {
   color: grey;
   margin-top: 40px;
   width: 50px;
   font-size: 10px;
 }
-
-.order span {
+.content .text-content .order p span {
   font-weight: 500;
   font-size: 20px;
   color: black;
 }
-
-.social {
+.content .social {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,18 +136,23 @@ body {
   position: fixed;
   right: 20px;
 }
-
-.social img {
+.content .social img {
   width: 50px;
   height: 50px;
 }
-
-.social img:hover {
+.content .social img:hover {
   opacity: 0.8;
   transition: ease-out 0.4s;
 }
 
-.card {
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.card-container .card {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -163,13 +163,11 @@ body {
   box-shadow: grey 0px 5px 20px;
   position: relative;
 }
-
-.card:hover {
+.card-container .card:hover {
   box-shadow: #e3a129 0px 5px 20px;
-  transition: ease-out 0.5s;
+  transition: ease-out 0.4s;
 }
-
-.food img {
+.card-container .card img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -178,37 +176,22 @@ body {
   top: -25px;
   left: -25px;
 }
-
-.icon {
-  position: absolute;
-  bottom: -25px;
-  right: -15px;
-}
-
-.icon img {
-  width: 50px;
-  height: 50px;
-}
-
-.text-card {
+.card-container .card .text-card {
   flex-grow: 1;
   margin-left: 85px;
 }
-
-.text-card h3 {
+.card-container .card .text-card h3 {
   font-size: 15px;
   font-weight: 500;
   margin: 0;
 }
-
-.text-card p {
+.card-container .card .text-card p {
   font-size: 12px;
   font-weight: 400;
   margin: 5px 0;
   color: grey;
 }
-
-.text-card a {
+.card-container .card .text-card a {
   display: inline-block;
   text-decoration: none;
   color: #e3a129;
@@ -216,39 +199,33 @@ body {
   font-weight: 500;
   margin-top: 5px;
 }
-
-.text-card a:hover {
+.card-container .card .text-card a:hover {
   text-decoration: underline;
 }
-
-.card-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 30px;
+.card-container .card .icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
-
-.toggle-button {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-}
-
-.toggle-button span {
-  width: 100%;
-  height: 3px;
-  background-color: #333;
+.card-container .card .icon img {
+  width: 50px;
+  height: 50px;
 }
 
 @media screen and (max-width: 768px) {
   .toggle-button {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
   }
-
+  .toggle-button span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+  }
   .links {
     display: none;
     flex-direction: column;
@@ -260,99 +237,73 @@ body {
     left: 0;
     z-index: 1000;
   }
-
+  .links.show {
+    display: flex;
+  }
   .links a {
     padding: 15px;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #ddd;
   }
-
   .login button {
     display: none;
   }
-
-  .links.show {
-    display: flex;
-  }
-
   .content {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
-  .text-content {
-    width: 100%;
-  }
-
   .content img {
     width: 80%;
     height: auto;
     margin-top: 20px;
   }
-
-  .links {
+  .content .order {
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    gap: 0;
   }
-
   .nav {
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
   }
-
   .card-container {
     flex-direction: column;
     align-items: center;
   }
-
   .social {
     flex-direction: row;
     bottom: 0;
-    padding: 5px;
+    padding: 10px;
     left: 5px;
-    height: 50px;
+    height: 30px;
     background-color: white;
     width: 100%;
   }
-
   .social img {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
   }
-
   .card {
     width: 90%;
   }
-
-  .card-container {
-    margin-top: 40px;
-  }
-
-  .order {
-    flex-direction: column-reverse;
-    justify-content: center;
-    gap: 0;
-  }
 }
-
 @media screen and (max-width: 480px) {
   .text-content h1 {
     font-size: 36px;
   }
-
   .text-content h3 {
     font-size: 16px;
   }
-
   .order button {
     padding: 10px 20px;
   }
-
   .social img {
     width: 30px;
     height: 30px;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
